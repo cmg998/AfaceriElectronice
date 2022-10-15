@@ -55,6 +55,8 @@ namespace ProiectMaster.Web.Controllers
         public IActionResult Edit(int id)
         {
             var dto = service.GetProduct(id);
+            
+            
             dto.ProductTypes = service.GetProductTypes();
             return View(dto);
         }
